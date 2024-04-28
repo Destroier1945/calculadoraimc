@@ -1,4 +1,5 @@
 import 'package:calculadoraimc/pages/homepage.dart';
+import 'package:calculadoraimc/pages/result.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomePage());
+    return MaterialApp(home: HomePage(title: Text(''),),
+    routes: <String, WidgetBuilder>{
+      '/home': (BuildContext context) => const HomePage(title: Text('')),
+      '/result': (BuildContext context) => const Result(title: Text(''),)
+
+    },
+    );
   }
 }

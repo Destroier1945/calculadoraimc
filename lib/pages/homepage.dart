@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({super.key, required Text title});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -15,12 +14,22 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Calculadora IMC',),centerTitle: true,
+          title: const Text('Calculadora IMC',),centerTitle: true,
         ),
         body: Container(
-          padding: EdgeInsets.all(8),
-          child: const Column(
+          padding: const EdgeInsets.all(8),
+          child:  Column(
             children: [
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                  ),
+                  hintText: 'NOME',
+
+                ),
+                keyboardType: TextInputType.text,
+              ),
+             SizedBox(height: 8,),
              TextField(
                decoration: InputDecoration(
                  border: OutlineInputBorder(
@@ -36,7 +45,9 @@ class _HomePageState extends State<HomePage> {
                   border: OutlineInputBorder(),
                   hintText: 'ALTURA'
                 ),
-              )
+              ),
+              ElevatedButton(onPressed: ()=> Navigator.pushNamed(context, '/result')
+              , child: Text('Calcular'))
             ],
           ),
         ),
