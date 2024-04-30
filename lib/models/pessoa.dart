@@ -1,9 +1,9 @@
-import 'dart:ffi';
 
 class  Pessoa{
   String nome;
-  Double peso;
-  Double altura;
+  double peso;
+  double altura;
+  double imc;
 
-  Pessoa({required this.nome, required this.altura, required this.peso});
+  Pessoa({required this.nome, required this.altura, required this.peso, required this.imc});
 }

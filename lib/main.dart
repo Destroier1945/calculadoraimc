@@ -1,21 +1,19 @@
 import 'package:calculadoraimc/pages/homepage.dart';
 import 'package:calculadoraimc/pages/result.dart';
+import 'package:calculadoraimc/utils/pessoa_data.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  runApp(ChangeNotifierProvider(create: (context) => PessoaData(),
+      child:MaterialApp(home: const HomePage(title: Text(''),),
+  routes: <String, WidgetBuilder>{
+  '/home': (BuildContext context) =>  const HomePage(title: Text('')),
+  '/result': (BuildContext context) =>  Result(title: Text(''))
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(home: HomePage(title: Text(''),),
-    routes: <String, WidgetBuilder>{
-      '/home': (BuildContext context) => const HomePage(title: Text('')),
-      '/result': (BuildContext context) => const Result(title: Text(''),)
-
-    },
-    );
-  }
+  },
+  ),
+  ),
+  );
 }
+
