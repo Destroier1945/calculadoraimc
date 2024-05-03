@@ -1,16 +1,13 @@
 # calculadoraimc
 
-Projeto para entega da pimeira avaliação do curso de Flutter da DIO
+Projeto para entega da primeira avaliação do curso de Flutter da DIO
 
-## Getting Started
+'![Home page image](screenshots/1.png)'
 
-This project is a starting point for a Flutter application.
+'![exemplo 1](screenshots/2.png)'
 
-A few resources to get you started if this is your first Flutter project:
+'![exemplo 2](screenshots/3.png)'
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+'![exemplo 3](screenshots/4.png)'
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+'![tela de resultado](screenshots/5.png)'

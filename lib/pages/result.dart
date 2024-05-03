@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class Result extends StatelessWidget {
-   const Result({super.key, required Text title, });
+  const  Result({super.key, required Text title, });
 
 
   @override
@@ -13,30 +13,22 @@ class Result extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Resultado'),
-
+        centerTitle: true, backgroundColor: Colors.greenAccent.withOpacity(0.7)
       ),
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset('assets/img.png',
+          Image.asset('assets/result.jpeg',
           fit: BoxFit.cover,),
           Center(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('Bom dia ${pessoa?.nome ?? ''}', style: TextStyle(fontSize: 36,
-                      foreground: Paint()
-                        ..shader = const LinearGradient(
-                          colors: <Color>[
-                            Colors.cyanAccent,
-                            Colors.orangeAccent,
-                          ],
-                        ).createShader(const Rect.fromLTRB(0, 20, 150, 20)),
-                    ),
+                    Text('Bom dia \n${pessoa?.nome ?? ''}', style: const TextStyle(fontSize: 64, color: Colors.white, fontWeight: FontWeight.bold),
                     ),
 
-                    Text('Seu IMC é: ${pessoa?.imc ??''}', style: const TextStyle(fontSize: 24, color: Colors.redAccent),),
+                    Text('Seu IMC é: ${pessoa?.imc.toStringAsFixed(2) ??''}', style: const TextStyle(fontSize: 48, color: Colors.white),),
 
                   ],
                 ),

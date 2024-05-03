@@ -20,7 +20,7 @@ void main() {
       child:MaterialApp(home: const HomePage(title: Text(''),),
         routes: <String, WidgetBuilder>{
           '/home': (BuildContext context) =>  const HomePage(title: Text('')),
-          '/result': (BuildContext context) =>  Result(title: Text(''))
+          '/result': (BuildContext context) =>  const Result(title: Text(''))
 
         },
       ),
