@@ -2,12 +2,12 @@
 
 Projeto para entega da primeira avaliação do curso de Flutter da DIO
 
-'![Home page image](screenshots/1.png)'
+<img alt="Home page image" height="480" src="screenshots/1.png" width="360"/>
 
-'![exemplo 1](screenshots/2.png)'
+<img alt="exemplo 1" height="480" src="screenshots/2.png" width="360"/>
 
-'![exemplo 2](screenshots/3.png)'
+<img alt="exemplo 2" height="480" src="screenshots/3.png" width="360"/>
 
-'![exemplo 3](screenshots/4.png)'
+<img alt="exemplo 3" height="480" src="screenshots/4.png" width="360"/>
 
-'![tela de resultado](screenshots/5.png)'
+<img alt="tela de resultado" height="480" src="screenshots/5.png" width="360"/>
