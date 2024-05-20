@@ -1,3 +1,4 @@
+import 'package:calculadoraimc/utils/verifica_saudacao.dart';
 import 'package:calculadoraimc/utils/pessoa_data.dart';
 import 'package:calculadoraimc/utils/recomendacoes.dart';
 import 'package:calculadoraimc/utils/tabela.dart';
@@ -15,7 +16,10 @@ class Result extends StatelessWidget {
 
     String classificao = classificaoImc(pessoa!.imc);
 
+
+
     return Scaffold(
+
       appBar: AppBar(
         title: const Text('Resultado'),
         centerTitle: true, backgroundColor: Colors.greenAccent.withOpacity(0.7)
@@ -25,13 +29,15 @@ class Result extends StatelessWidget {
         children: [
           Image.asset('assets/result.jpeg',
           fit: BoxFit.cover,),
+
           SingleChildScrollView(
             child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Bom dia',style: const TextStyle(fontSize: 64, color: Colors.white, fontWeight: FontWeight.bold),),
+                      Text(verificaSaudcao(),style: const TextStyle(fontSize: 64, color: Colors.white, fontWeight: FontWeight.bold),),
+
                       Text(pessoa.nome, style: const TextStyle(fontSize: 64, color: Colors.white, fontWeight: FontWeight.bold),
                       ),
             
@@ -41,11 +47,11 @@ class Result extends StatelessWidget {
 
 
                       Container(
-                        padding: const EdgeInsets.all(16),
+                        padding: const EdgeInsets.only(left: 20, right: 20, top: 16, bottom: 16),
                         height: MediaQuery.of(context).size.height * 0.6,
                         width: double.maxFinite,
                         decoration: BoxDecoration(
-                          color: Colors.greenAccent.withOpacity(0.2),
+                          color: Colors.greenAccent.withOpacity(0.3),
                           borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(25),
                             topRight:  Radius.circular(25),
@@ -55,10 +61,15 @@ class Result extends StatelessWidget {
                           children: [
                             Text(classificao,style: const TextStyle(
                               fontSize: 24,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800
                               ),
+
                             ),
                             Text(getRecomendacoes(classificao), style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500
                             ),)
                           ],
                         ),
